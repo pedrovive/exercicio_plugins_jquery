@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Protest Riot', sans-serif;
+    font-weight: lighter; /* deixa a letra mais fina */
+}
+
+:root {
+    --letra: black;
+    --borda: rgb(19, 123, 179);
+    --button: lightgreen;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url(/imagens/neuro.jpg);
+    background-size: cover; /* faz com que a imagem cubra toda a página */
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 100%; /* faz com que a imagem cubra toda a altura do corpo da página */
+    overflow: hidden; /* impede a barra de rolagem vertical */
+    display: flex;
+    justify-content: center;
+}
+
+.container { /* criando o enfeito de embaçado + as bordas e cor da letra */
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--borda);
+    border-radius: 8px;
+    max-width: 330px;
+    width: 110%;
+    padding-bottom: 5px;
+    margin: 120px 0;
+    color: var(--letra);
+    filter: blur();
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(6px);
+}
+
+.form-campo input {
+    width: 100%;
+    display: block;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--letra);
+}
+
+.container button {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.container button:hover{
+    background-color: var(--button);
+}
+
+form input:focus {
+    border: var(--borda);
+}
